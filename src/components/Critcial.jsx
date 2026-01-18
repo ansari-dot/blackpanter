@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { ChevronRight } from 'lucide-react';
 import { motion, useInView } from 'framer-motion';
 
-export default function ServiceDetailSection() {
+export default function ServiceDetailSection({ service }) {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.15 });
   const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
@@ -16,7 +16,7 @@ export default function ServiceDetailSection() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const highlights = [
+  const highlights = service ? service.keyHighlights : [
     "Full ISO 17025 Lab Testing Capabilities",
     "NERC PRC-005-6 Compliance Documentation",
     "Nationwide 24/7 Field Support Response",
@@ -24,7 +24,7 @@ export default function ServiceDetailSection() {
     "NERC PRC-005-6 Compliance Documentation"
   ];
 
-  const services = [
+  const services = service ? service.services : [
     { name: "Ni-Cd & Block Nickel Maintenance", active: true },
     { name: "Lead-Acid & VRLA Services", active: false },
     { name: "Electrical Conditioning", active: false },
@@ -368,7 +368,7 @@ export default function ServiceDetailSection() {
         <div style={styles.contentSection}>
           {/* Title Section */}
           <div style={styles.titleWrapper}>
-            <h2 style={styles.title}>Critical Power Integrity</h2>
+            <h2 style={styles.title}>{service ? service.title : "Critical Power Integrity"}</h2>
             <motion.div 
               style={styles.accentBar}
               initial={{ width: 0 }}
@@ -384,7 +384,7 @@ export default function ServiceDetailSection() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: isMobile ? 0.4 : 0.6, delay: isMobile ? 0 : 0.4 }}
           >
-            Nickel-Cadmium (Ni-Cd) and Block Nickel batteries are the backbone of industrial backup power, known for their durability in harsh environments. However, without proper maintenance, electrolyte levels can drift, carbonates can build up, and capacity can degrade silently.{'\n\n'}Our specialized maintenance program ensures your systems remain IEEE compliant and ready to perform when the grid fails. We service utility substations, railway signaling, and offshore platforms.
+            {service ? service.criticalPowerDescription : "Nickel-Cadmium (Ni-Cd) and Block Nickel batteries are the backbone of industrial backup power, known for their durability in harsh environments. However, without proper maintenance, electrolyte levels can drift, carbonates can build up, and capacity can degrade silently.\n\nOur specialized maintenance program ensures your systems remain IEEE compliant and ready to perform when the grid fails. We service utility substations, railway signaling, and offshore platforms."}
           </motion.p>
 
           <motion.h3 
@@ -484,8 +484,8 @@ export default function ServiceDetailSection() {
 
         {/* Image */}
         <motion.img
-          src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80"
-          alt="Battery maintenance"
+          src={service ? service.imageUrl : "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80"}
+          alt={service ? service.title : "Battery maintenance"}
           style={styles.image}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
@@ -555,9 +555,9 @@ export default function ServiceDetailSection() {
             transition: { duration: 0.3 }
           }}
         >
-          <h4 style={styles.emergencyTitle}>Need Immediate Support?</h4>
+          <h4 style={styles.emergencyTitle}>{service ? service.emergencyTitle : "Need Immediate Support?"}</h4>
           <p style={styles.emergencyText}>
-            Our emergency response team is available 24/7 for critical battery system issues.
+            {service ? service.emergencyDescription : "Our emergency response team is available 24/7 for critical battery system issues."}
           </p>
           <motion.button 
             style={styles.emergencyButton}
@@ -597,9 +597,9 @@ export default function ServiceDetailSection() {
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="white" strokeWidth="2" fill="none"/>
             </svg>
           </motion.div>
-          <h4 style={styles.certTitle}>IEEE Certified</h4>
+          <h4 style={styles.certTitle}>{service ? service.certificationTitle : "IEEE Certified"}</h4>
           <p style={styles.certText}>
-            All procedures comply with IEEE 1106, 1188, and 450 standards.
+            {service ? service.certificationDescription : "All procedures comply with IEEE 1106, 1188, and 450 standards."}
           </p>
         </motion.div>
       </motion.div>

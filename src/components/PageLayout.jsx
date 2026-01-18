@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaBatteryFull, FaBolt, FaTools, FaRecycle, FaWrench, FaBars, FaTimes } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdBuild } from "react-icons/md";
+import { ScrollToTop } from "./ScrollToTop";
 
 const navigationItems = [
   { label: "Home", path: "/" },
@@ -12,11 +13,11 @@ const navigationItems = [
 ];
 
 const servicesDropdownItems = [
-  { label: "Battery Maintenance Services", Icon: FaBatteryFull },
-  { label: "Electrical Conditioning & Testing", Icon: FaBolt },
-  { label: "Major Battery Work", Icon: FaWrench },
-  { label: "Battery Recycling & Refurbishment", Icon: FaRecycle },
-  { label: "Equipment We Use", Icon: MdBuild },
+  { label: "Battery Maintenance Services", Icon: FaBatteryFull, slug: "battery-maintenance-services" },
+  { label: "Electrical Conditioning & Testing", Icon: FaBolt, slug: "electrical-conditioning-testing" },
+  { label: "Major Battery Work", Icon: FaWrench, slug: "major-battery-work" },
+  { label: "Battery Recycling & Refurbishment", Icon: FaRecycle, slug: "battery-recycling-refurbishment" },
+  { label: "Equipment We Use", Icon: MdBuild, slug: "equipment-we-use" },
 ];
 
 export const PageLayout = ({ children, heroContent, backgroundImage, vectorBackground, backgroundSlider }) => {
@@ -76,8 +77,11 @@ export const PageLayout = ({ children, heroContent, backgroundImage, vectorBackg
 
             {/* Mobile Menu Button */}
             <button 
-              className="flex items-center justify-center w-10 h-10 text-[#F06123]"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="flex items-center justify-center w-10 h-10 text-[#F06123] bg-white/80 backdrop-blur-sm rounded-lg shadow-md hover:bg-white hover:shadow-lg transition-all duration-200"
+              onClick={() => {
+                console.log('Mobile menu clicked, current state:', isMobileMenuOpen);
+                setIsMobileMenuOpen(!isMobileMenuOpen);
+              }}
             >
               {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
             </button>
@@ -101,9 +105,7 @@ export const PageLayout = ({ children, heroContent, backgroundImage, vectorBackg
                 <div key={index} className="relative">
                   {item.hasDropdown ? (
                     <div
-                      className="relative"
-                      onMouseEnter={() => setIsServicesOpen(true)}
-                      onMouseLeave={() => setIsServicesOpen(false)}
+                      className="relative group"
                     >
                       <Link
                         to={item.path}
@@ -126,25 +128,23 @@ export const PageLayout = ({ children, heroContent, backgroundImage, vectorBackg
                       </Link>
                       
                       {/* Services Dropdown - Desktop */}
-                      {isServicesOpen && (
-                        <div className="absolute top-full left-0 mt-2 w-[320px] bg-white rounded-lg shadow-xl border border-gray-200 py-3 z-[100]">
-                          {servicesDropdownItems.map((service, idx) => {
-                            const IconComponent = service.Icon;
-                            return (
-                              <Link
-                                key={idx}
-                                to="/service-detail"
-                                className="flex items-center gap-4 px-5 py-3.5 hover:bg-gray-50 transition-colors duration-200 group"
-                              >
-                                <IconComponent className="text-lg text-gray-500 group-hover:text-[#F06123] transition-colors duration-200 flex-shrink-0" />
-                                <span className="text-sm text-gray-700 font-medium group-hover:text-gray-900 transition-colors duration-200 leading-relaxed">
-                                  {service.label}
-                                </span>
-                              </Link>
-                            );
-                          })}
-                        </div>
-                      )}
+                      <div className="absolute top-full left-0 mt-2 w-[320px] bg-white rounded-lg shadow-xl border border-gray-200 py-3 z-[100] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        {servicesDropdownItems.map((service, idx) => {
+                          const IconComponent = service.Icon;
+                          return (
+                            <Link
+                              key={idx}
+                              to={`/service/${service.slug}`}
+                              className="flex items-center gap-4 px-5 py-3.5 hover:bg-gray-50 transition-colors duration-200 group/item"
+                            >
+                              <IconComponent className="text-lg text-gray-500 group-hover/item:text-[#F06123] transition-colors duration-200 flex-shrink-0" />
+                              <span className="text-sm text-gray-700 font-medium group-hover/item:text-gray-900 transition-colors duration-200 leading-relaxed">
+                                {service.label}
+                              </span>
+                            </Link>
+                          );
+                        })}
+                      </div>
                     </div>
                   ) : (
                     <Link
@@ -272,7 +272,7 @@ export const PageLayout = ({ children, heroContent, backgroundImage, vectorBackg
                               return (
                                 <Link
                                   key={idx}
-                                  to="/service-detail"
+                                  to={`/service/${service.slug}`}
                                   className="flex items-center gap-4 px-10 py-4 hover:bg-gray-100 transition-colors duration-200 group"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                 >
@@ -368,6 +368,9 @@ export const PageLayout = ({ children, heroContent, backgroundImage, vectorBackg
 
       {/* Page Content */}
       {children}
+      
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
     </div>
   );
 };

@@ -20,7 +20,7 @@ export default function WhoWeAreSection() {
     "Lead-Acid & VRLA",
     "UPS Backup Power Banks",
     "Hybrid Solar–Battery Systems",
-    "Industrial Motive-Power Batteries"
+    "Industrial Motive-Power Batteries",
   ];
 
   const styles = {

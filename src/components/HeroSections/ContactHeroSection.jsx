@@ -12,7 +12,7 @@ export const HeroSection = ({
   secondaryButtonText = "Call Us Now"
 }) => {
   return (
-    <section className="flex flex-col w-full max-w-[700px] items-start gap-8">
+    <section className="flex flex-col w-full max-w-[700px] items-start gap-8 mt-8">
       {/* Badge */}
       <div className="flex items-center gap-2 px-4 py-2 bg-[#F06123] rounded-full">
         <div className="w-2 h-2 bg-white rounded-full" />

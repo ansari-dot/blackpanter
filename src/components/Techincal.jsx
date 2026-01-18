@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FaBolt, FaThermometerHalf, FaBalanceScale, FaWrench, FaSyncAlt, FaCheckCircle } from 'react-icons/fa';
+import { FaBolt, FaThermometerHalf, FaBalanceScale, FaWrench, FaSyncAlt, FaCheckCircle, FaVial, FaSearch, FaChartLine, FaTools, FaFileAlt, FaClipboardCheck, FaShieldAlt, FaTruck, FaRecycle, FaBiohazard, FaCertificate, FaCog, FaChargingStation, FaClock, FaNetworkWired, FaStethoscope, FaPlug, FaExchangeAlt, FaRedo, FaArrowRight, FaSearchPlus, FaFlask, FaBatteryFull, FaSatelliteDish, FaAmbulance, FaHardHat, FaEraser, FaSoap, FaWind, FaStar, FaCar, FaBus, FaShip } from 'react-icons/fa';
 
-const TechnicalProcedures = () => {
+const TechnicalProcedures = ({ service }) => {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.15 });
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -75,51 +75,66 @@ const TechnicalProcedures = () => {
     }
   };
 
-  // Procedures data
-  const procedures = [
-    {
-      id: 1,
-      title: "Capacity Testing",
-      description: "Full discharge testing to verify actual amp-hour performance against manufacturer ratings.",
-      Icon: FaBolt,
-      delay: 0
-    },
-    {
-      id: 2,
-      title: "Thermal Scanning",
-      description: "Infrared thermography to detect high-resistance connections and potential thermal runaways.",
-      Icon: FaThermometerHalf,
-      delay: 0.2
-    },
-    {
-      id: 3,
-      title: "Cell Balancing",
-      description: "Individual cell voltage equalization to ensure uniform performance across the entire string.",
-      Icon: FaBalanceScale,
-      delay: 0.4
-    },
-    {
-      id: 4,
-      title: "Charger Calibration",
-      description: "Precision adjustment of float and equalize voltages to prevent over/under-charging.",
-      Icon: FaWrench,
-      delay: 0.6
-    },
-    {
-      id: 5,
-      title: "Deep-Cycle Rejuvenation",
-      description: "Specialized cycling protocols to break down crystalline formations and restore capacity.",
-      Icon: FaSyncAlt,
-      delay: 0.8
-    },
-    {
-      id: 6,
-      title: "Compliance Inspections",
-      description: "Detailed visual and mechanical inspections to meet safety and regulatory standards.",
-      Icon: FaCheckCircle,
-      delay: 1
-    }
-  ];
+  // Icon mapping
+  const iconMap = {
+    FaBolt, FaThermometerHalf, FaBalanceScale, FaWrench, FaSyncAlt, FaCheckCircle,
+    FaVial, FaSearch, FaChartLine, FaTools, FaFileAlt, FaClipboardCheck, FaShieldAlt, 
+    FaTruck, FaRecycle, FaBiohazard, FaCertificate, FaCog, FaChargingStation, 
+    FaClock, FaNetworkWired, FaStethoscope, FaPlug, FaExchangeAlt, FaRedo, 
+    FaArrowRight, FaSearchPlus, FaFlask, FaBatteryFull, FaCar, FaBus, FaShip,
+    FaSatelliteDish, FaAmbulance, FaHardHat, FaEraser, FaSoap, FaWind, FaStar
+  };
+
+  // Procedures data - use service data or fallback
+  const procedures = service && service.technicalProcedures ? 
+    service.technicalProcedures.map(proc => ({
+      ...proc,
+      Icon: iconMap[proc.icon] || FaBolt
+    })) :
+    [
+      {
+        id: 1,
+        title: "Capacity Testing",
+        description: "Full discharge testing to verify actual amp-hour performance against manufacturer ratings.",
+        Icon: FaBolt,
+        delay: 0
+      },
+      {
+        id: 2,
+        title: "Thermal Scanning",
+        description: "Infrared thermography to detect high-resistance connections and potential thermal runaways.",
+        Icon: FaThermometerHalf,
+        delay: 0.2
+      },
+      {
+        id: 3,
+        title: "Cell Balancing",
+        description: "Individual cell voltage equalization to ensure uniform performance across the entire string.",
+        Icon: FaBalanceScale,
+        delay: 0.4
+      },
+      {
+        id: 4,
+        title: "Charger Calibration",
+        description: "Precision adjustment of float and equalize voltages to prevent over/under-charging.",
+        Icon: FaWrench,
+        delay: 0.6
+      },
+      {
+        id: 5,
+        title: "Deep-Cycle Rejuvenation",
+        description: "Specialized cycling protocols to break down crystalline formations and restore capacity.",
+        Icon: FaSyncAlt,
+        delay: 0.8
+      },
+      {
+        id: 6,
+        title: "Compliance Inspections",
+        description: "Detailed visual and mechanical inspections to meet safety and regulatory standards.",
+        Icon: FaCheckCircle,
+        delay: 1
+      }
+    ];
 
   // Styles
   const sectionStyle = {

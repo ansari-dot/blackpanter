@@ -2,57 +2,29 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Battery, Zap, Settings, Recycle, Server, AlertCircle, RefreshCw, MapPin, Droplets } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import { serviceDetailData } from '../data/serviceDetailData';
 
 export default function ComprehensiveBatterySolutions() {
   const navigate = useNavigate();
 
-  const services = [
-    {
-      icon: Battery,
-      title: "Ni-Cd & Block Nickel Maintenance",
-      description: "Expert capacity testing, rejuvenation, and precise cell balancing to maximize battery efficiency and extend operational lifespan."
-    },
-    {
-      icon: Zap,
-      title: "Battery Conditioning & Optimization",
-      description: "Advanced conditioning techniques and optimization protocols to restore and enhance battery performance for peak operational readiness."
-    },
-    {
-      icon: Settings,
-      title: "Preventive Maintenance Programs",
-      description: "Comprehensive preventive maintenance schedules designed to identify issues early and ensure continuous, reliable power system performance."
-    },
-    {
-      icon: Recycle,
-      title: "Battery Recycling & Disposal",
-      description: "Environmentally responsible recycling and disposal services ensuring compliance with regulations and sustainable practices."
-    },
-    {
-      icon: Server,
-      title: "UPS Battery Bank Support",
-      description: "Complete UPS battery bank management including testing, maintenance, and replacement to ensure uninterrupted power supply."
-    },
-    {
-      icon: AlertCircle,
-      title: "Emergency Response Services",
-      description: "24/7 rapid response team ready to address critical battery failures and power system emergencies at a moment's notice."
-    },
-    {
-      icon: RefreshCw,
-      title: "Industrial Battery Reconditioning",
-      description: "Professional reconditioning services to restore aging batteries to near-original performance and extend their operational life."
-    },
-    {
-      icon: MapPin,
-      title: "On-Site Field Services",
-      description: "Fully equipped mobile service teams providing comprehensive battery maintenance and testing directly at your facility location."
-    },
-    {
-      icon: Droplets,
-      title: "Battery Wash & Cleaning",
-      description: "Professional cleaning and washing services to remove corrosion, debris, and contaminants ensuring optimal battery performance."
-    }
-  ];
+  // Icon mapping for services
+  const iconMap = {
+    "Ni-Cd & Block Nickel Maintenance": Battery,
+    "Preventive Maintenance Programs": Settings,
+    "Battery Recycling & Disposal": Recycle,
+    "UPS Battery Bank Support": Server,
+    "Emergency Response Services": AlertCircle,
+    "Industrial Battery Reconditioning": RefreshCw,
+    "On-Site Field Services": MapPin,
+    "Battery Wash & Cleaning": Droplets
+  };
+
+  const services = serviceDetailData.map(service => ({
+    icon: iconMap[service.title] || Battery,
+    title: service.title,
+    description: service.heroDescription,
+    slug: service.slug
+  }));
 
   // Animation variants
   const containerVariants = {
@@ -476,7 +448,7 @@ export default function ComprehensiveBatterySolutions() {
                 transition={{ duration: 0.2 }}
                 onClick={(e) => {
                   e.stopPropagation();
-                  navigate('/service-detail');
+                  navigate(`/service/${service.slug}`);
                 }}
               >
                 <span>Learn More</span>

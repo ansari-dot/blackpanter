@@ -345,7 +345,8 @@ const IndustrySection = () => {
         "Data centers & server farms",
         "Healthcare facilities",
         "Transportation & logistics",
-        "Manufacturing plants"
+        "Manufacturing plants",
+        "Oil and gas"
     ];
 
   return (

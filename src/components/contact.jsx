@@ -488,8 +488,8 @@ const ContactSection = () => {
                     <MapPin size={isMobile ? 22 : 24} color="#F06123" />
                   </div>
                   <div style={{ flex: 1 }}>
-                    <div style={labelStyle}>Headquarters – USA</div>
-                    <div style={valueStyle}>City, State</div>
+                    <div style={labelStyle}>Headquarters – Australia</div>
+                    <div style={valueStyle}>6/31 Gov Macquarie Dr</div>
                   </div>
                 </div>
 
@@ -500,7 +500,7 @@ const ContactSection = () => {
                   </div>
                   <div style={{ flex: 1 }}>
                     <div style={labelStyle}>Phone</div>
-                    <div style={orangeValueStyle}>000-000-0000</div>
+                    <div style={orangeValueStyle}>+61 402 277 723</div>
                   </div>
                 </div>
 
@@ -511,7 +511,7 @@ const ContactSection = () => {
                   </div>
                   <div style={{ flex: 1 }}>
                     <div style={labelStyle}>Email</div>
-                    <div style={orangeValueStyle}>info@yourcompany.com</div>
+                    <div style={orangeValueStyle}>info@blackpnther-batteries.com</div>
                   </div>
                 </div>
 
@@ -662,9 +662,9 @@ const ContactSection = () => {
             >
               <h4 style={mapTitleStyle}>Our Location</h4>
               <p style={mapAddressStyle}>
-                123 Battery Street<br />
-                City, State 12345<br />
-                United States
+                6/31 Gov Macquarie Dr<br />
+                NSW 2560<br />
+                Australia
               </p>
               <div style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px solid #e5e7eb' }}>
                 <span style={{ ...orangeValueStyle, fontSize: '13px' }}>📍 Get Directions</span>
@@ -673,7 +673,7 @@ const ContactSection = () => {
 
             {/* Google Map Embedded */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.30596073366!2d-74.25986548248684!3d40.69714941932609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.7330344749!2d150.96109891521448!3d-33.92502038062986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12be190b9e633f%3A0xfb2bea702ec90128!2s6%2F31+Gov+Macquarie+Dr!5e0!3m2!1sen!2sau!4v1234567890123!5m2!1sen!2sau"
               width="100%"
               height="100%"
               style={{ border: 0 }}

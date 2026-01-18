@@ -359,17 +359,17 @@ const Footer = () => {
             <div style={columnStyle}>
               <h3 style={columnTitleStyle}>Contact Us</h3>
               <div style={linksContainerStyle}>
-                <a href="tel:8005550199" className="footer-link" style={linkStyle}>
+                <a href="tel:+61402277723" className="footer-link" style={linkStyle}>
                   <FaPhone style={{ display: 'inline', marginRight: '8px', fontSize: '12px' }} />
-                  (800) 555-0199
+                  +61 402 277 723
                 </a>
-                <a href="mailto:info@powertech.com" className="footer-link" style={linkStyle}>
+                <a href="mailto:info@blackpnther-batteries.com" className="footer-link" style={linkStyle}>
                   <FaEnvelope style={{ display: 'inline', marginRight: '8px', fontSize: '12px' }} />
-                  info@powertech.com
+                  info@blackpnther-batteries.com
                 </a>
                 <span className="footer-link" style={{...linkStyle, cursor: 'default'}}>
                   <FaMapMarkerAlt style={{ display: 'inline', marginRight: '8px', fontSize: '12px' }} />
-                  City, State, USA
+                  6/31 Gov Macquarie Dr, NSW 2560, Australia
                 </span>
                 <span className="footer-link" style={{...linkStyle, cursor: 'default'}}>
                   <FaClock style={{ display: 'inline', marginRight: '8px', fontSize: '12px' }} />

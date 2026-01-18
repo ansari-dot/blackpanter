@@ -395,15 +395,16 @@ const TestimonialsCards = () => {
               animate="animate"
             >
               {[...Array(5)].map((_, i) => (
-                <motion.Star
-                  key={i} 
-                  style={starStyle} 
-                  fill="currentColor"
-                  initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: false, amount: 0.3 }}
-                  transition={{ duration: isMobile ? 0.2 : 0.3, delay: isMobile ? 0 : i * 0.1 }}
-                />
+                <motion.div
+                  key={i}
+                  whileHover={{ scale: 1.2, rotate: 180 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Star
+                    style={starStyle} 
+                    fill="currentColor"
+                  />
+                </motion.div>
               ))}
             </motion.div>
             

@@ -38,8 +38,11 @@ export const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="flex items-center justify-center w-10 h-10 text-[#F06123]"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="flex items-center justify-center w-10 h-10 text-[#F06123] bg-white/80 backdrop-blur-sm rounded-lg shadow-md hover:bg-white hover:shadow-lg transition-all duration-200"
+            onClick={() => {
+              console.log('Mobile menu clicked, current state:', isMobileMenuOpen);
+              setIsMobileMenuOpen(!isMobileMenuOpen);
+            }}
           >
             {isMobileMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>

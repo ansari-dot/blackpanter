@@ -369,7 +369,7 @@ const Footer = () => {
                 </a>
                 <span className="footer-link" style={{...linkStyle, cursor: 'default'}}>
                   <FaMapMarkerAlt style={{ display: 'inline', marginRight: '8px', fontSize: '12px' }} />
-                  6/31 Gov Macquarie Dr, NSW 2560, Australia
+                  6/31 Gov Macquarie Dr, NSW 2170, Australia
                 </span>
                 <span className="footer-link" style={{...linkStyle, cursor: 'default'}}>
                   <FaClock style={{ display: 'inline', marginRight: '8px', fontSize: '12px' }} />

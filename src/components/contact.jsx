@@ -663,7 +663,7 @@ const ContactSection = () => {
               <h4 style={mapTitleStyle}>Our Location</h4>
               <p style={mapAddressStyle}>
                 6/31 Gov Macquarie Dr<br />
-                NSW 2560<br />
+                NSW 2170<br />
                 Australia
               </p>
               <div style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px solid #e5e7eb' }}>

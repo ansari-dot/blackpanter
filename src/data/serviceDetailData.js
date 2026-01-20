@@ -1,3 +1,13 @@
+import BatteryRecycle from '../assets/BatteryRecycle.png';
+import ElectricalConditioning from '../assets/Electrical Conditioning.png';
+import equpiment from '../assets/equpiment.png';
+import Maintenance from '../assets/Maintenance.png';
+import major from '../assets/major.png';
+
+
+
+
+
 export const serviceDetailData = [
   {
     id: 1,
@@ -567,7 +577,7 @@ export const serviceDetailData = [
     emergencyDescription: "24/7 emergency battery services available for critical power system failures.",
     certificationTitle: "Certified Technicians",
     certificationDescription: "Our technicians are certified and trained for all major battery brands and types.",
-    imageUrl: "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=800&q=80"
+    imageUrl: Maintenance
   },
   {
     id: 10,
@@ -631,7 +641,7 @@ export const serviceDetailData = [
     emergencyDescription: "24/7 emergency electrical services for critical battery system issues.",
     certificationTitle: "Certified Testing",
     certificationDescription: "All testing procedures comply with IEEE 450, 1188, and 1106 standards.",
-    imageUrl: "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=800&q=80"
+    imageUrl: ElectricalConditioning
   },
   {
     id: 11,
@@ -695,7 +705,7 @@ export const serviceDetailData = [
     emergencyDescription: "24/7 emergency installation and maintenance services for critical battery system failures.",
     certificationTitle: "Installation Certified",
     certificationDescription: "All installation work meets NEC, IBC, and local electrical code requirements.",
-    imageUrl: "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=800&q=80"
+    imageUrl: major
   },
   {
     id: 12,
@@ -759,7 +769,7 @@ export const serviceDetailData = [
     emergencyDescription: "24/7 emergency recycling services for battery spills and environmental incidents.",
     certificationTitle: "Environmental Certified",
     certificationDescription: "All recycling processes meet EPA and environmental regulatory standards.",
-    imageUrl: "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=800&q=80"
+    imageUrl: BatteryRecycle
   },
   {
     id: 13,
@@ -823,6 +833,6 @@ export const serviceDetailData = [
     emergencyDescription: "24/7 emergency equipment support for critical tool failures and service needs.",
     certificationTitle: "Technology Certified",
     certificationDescription: "All equipment meets manufacturer specifications and industry standards.",
-    imageUrl: "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=800&q=80"
+    imageUrl: equpiment
   }
 ];

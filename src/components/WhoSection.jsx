@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-
+import about from '../assets/about.png'
 export default function WhoWeAreSection() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
@@ -376,7 +376,7 @@ export default function WhoWeAreSection() {
         }}
       >
         <img
-          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80"
+          src={about}
           alt="Industrial battery maintenance facility"
           style={styles.image}
         />

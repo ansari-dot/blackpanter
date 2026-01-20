@@ -391,7 +391,7 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
           >
             <p style={copyrightStyle}>
-              © 2024 PowerTech Battery Services. All rights reserved.
+              © 2024 Black Panther Batteries. All rights reserved.
             </p>
           </motion.div>
         </div>

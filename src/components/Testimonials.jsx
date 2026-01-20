@@ -92,7 +92,7 @@ const TestimonialsCards = () => {
   const testimonials = [
     {
       id: 1,
-      text: "PowerTech's preventive maintenance program saved us from a catastrophic failure during peak production. Their team is unmatched.",
+      text: "Black Panther Batteries' preventive maintenance program saved us from a catastrophic failure during peak production. Their team is unmatched.",
       title: "Operations Director",
       company: "Regional Utility Co.",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",

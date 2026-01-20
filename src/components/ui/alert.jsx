@@ -131,7 +131,7 @@ export default (props) => {
 										<img
 											src={logo} 
 											className="h-28 w-auto object-contain transform hover:scale-125 transition-transform duration-300"
-											alt="PowerTech Logo"
+											alt="Black Panther Batteries Logo"
 										/>
 									</Link>
 								</div>
@@ -172,7 +172,7 @@ export default (props) => {
 											<img
 												src={logo} 
 												className="h-28 w-auto object-contain transform hover:scale-125 transition-transform duration-300"
-												alt="PowerTech Logo"
+												alt="Black Panther Batteries Logo"
 											/>
 										</Link>
 										<button 
@@ -1033,7 +1033,7 @@ export default (props) => {
 											lineHeight: '1.8'
 										}}
 									>
-										{"PowerTech's preventive maintenance program saved us from a catastrophic failure during peak production. Their team is unmatched."}
+										{"Black Panther Batteries' preventive maintenance program saved us from a catastrophic failure during peak production. Their team is unmatched."}
 									</span>
 									<img
 										src={"https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/aaec5c0c-c278-4ec9-873b-b51ee7852e29"} 
@@ -1391,7 +1391,7 @@ export default (props) => {
 							<div className="h-px bg-white/10 mb-6"></div>
 							<div className="flex flex-col sm:flex-row justify-between items-center gap-4 pb-4">
 								<p className="text-white text-sm opacity-70 text-center sm:text-left">
-									{" 2024 PowerTech Battery Services. All rights reserved."}
+									{" 2024 Black Panther Batteries. All rights reserved."}
 								</p>
 								<div className="flex items-center gap-6">
 									<Link to="#" className="text-white text-sm opacity-70 hover:opacity-100 hover:text-[#F06123] transition-all duration-300">

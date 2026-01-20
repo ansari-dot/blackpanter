@@ -17,6 +17,7 @@ function App() {
         <Route path="/service-detail" element={<ServiceDetail />} />
         <Route path="/service/:slug" element={<ServiceDetailPage />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );

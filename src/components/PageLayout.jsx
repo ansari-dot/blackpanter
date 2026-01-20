@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaBatteryFull, FaBolt, FaTools, FaRecycle, FaWrench, FaBars, FaTimes } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 import { MdBuild } from "react-icons/md";
@@ -22,9 +22,14 @@ const servicesDropdownItems = [
 
 export const PageLayout = ({ children, heroContent, backgroundImage, vectorBackground, backgroundSlider }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handleGetQuote = () => {
+    navigate('/contact');
+  };
 
   // Handle slider functionality
   useEffect(() => {
@@ -214,6 +219,7 @@ export const PageLayout = ({ children, heroContent, backgroundImage, vectorBackg
                   e.target.style.backgroundColor = '#F06123';
                   e.target.style.transform = 'scale(1)';
                 }}
+                onClick={handleGetQuote}
               >
                 Get a Quote
               </button>
@@ -352,6 +358,7 @@ export const PageLayout = ({ children, heroContent, backgroundImage, vectorBackg
                   onMouseLeave={(e) => {
                     e.target.style.backgroundColor = '#F06123';
                   }}
+                  onClick={handleGetQuote}
                 >
                   Get a Quote
                 </button>

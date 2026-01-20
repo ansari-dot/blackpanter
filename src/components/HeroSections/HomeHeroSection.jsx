@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from "lucide-react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const HeroSection = ({ 
   badge = "Nationwide Industrial Battery Services",
@@ -11,6 +12,15 @@ export const HeroSection = ({
   primaryButtonText = "Request a Consultation",
   secondaryButtonText = "Explore Services"
 }) => {
+  const navigate = useNavigate();
+
+  const handlePrimaryClick = () => {
+    navigate('/contact');
+  };
+
+  const handleSecondaryClick = () => {
+    navigate('/services');
+  };
   return (
     <section className="flex flex-col w-full max-w-[700px] items-start gap-8 mt-8">
       {/* Badge */}
@@ -53,6 +63,7 @@ export const HeroSection = ({
           }}
           onMouseEnter={(e) => e.target.style.backgroundColor = '#FF8803'}
           onMouseLeave={(e) => e.target.style.backgroundColor = '#F06123'}
+          onClick={handlePrimaryClick}
         >
           {primaryButtonText}
           <ArrowRightIcon className="w-5 h-5" />
@@ -64,6 +75,7 @@ export const HeroSection = ({
             backgroundColor: '#ffffff',
             border: 'none'
           }}
+          onClick={handleSecondaryClick}
         >
           {secondaryButtonText}
         </button>

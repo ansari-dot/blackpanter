@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from "lucide-react";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export const HeroSection = ({ 
   badge = "Get in Touch",
@@ -11,6 +12,17 @@ export const HeroSection = ({
   primaryButtonText = "Send Message",
   secondaryButtonText = "Call Us Now"
 }) => {
+  const navigate = useNavigate();
+
+  const handlePrimaryClick = () => {
+    navigate('/contact');
+  };
+
+  const handleSecondaryClick = () => {
+    // For "Call Us Now", we'll also navigate to contact page
+    // In a real app, this could open a phone dialer
+    navigate('/contact');
+  };
   return (
     <section className="flex flex-col w-full max-w-[700px] items-start gap-8 mt-8">
       {/* Badge */}
@@ -53,6 +65,7 @@ export const HeroSection = ({
           }}
           onMouseEnter={(e) => e.target.style.backgroundColor = '#FF8803'}
           onMouseLeave={(e) => e.target.style.backgroundColor = '#F06123'}
+          onClick={handlePrimaryClick}
         >
           {primaryButtonText}
           <ArrowRightIcon className="w-5 h-5" />
@@ -64,6 +77,7 @@ export const HeroSection = ({
             backgroundColor: '#ffffff',
             border: 'none'
           }}
+          onClick={handleSecondaryClick}
         >
           {secondaryButtonText}
         </button>

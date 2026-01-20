@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { motion, useInView } from 'framer-motion';
 
 export default function ServiceDetailSection({ service }) {
@@ -31,6 +32,23 @@ export default function ServiceDetailSection({ service }) {
     { name: "UPS Bank Support", active: false },
     { name: "Recycling & Disposal", active: false }
   ];
+
+  // Function to get slug based on service name
+  const getServiceSlug = (serviceName) => {
+    const slugMap = {
+      "Ni-Cd & Block Nickel Maintenance": "ni-cd-block-nickel-maintenance",
+      "Lead-Acid & VRLA Services": "preventive-maintenance-programs",
+      "Electrical Conditioning": "electrical-conditioning-testing",
+      "UPS Bank Support": "ups-battery-bank-support",
+      "Recycling & Disposal": "battery-recycling-disposal",
+      "Battery Maintenance Services": "battery-maintenance-services",
+      "Electrical Conditioning & Testing": "electrical-conditioning-testing",
+      "Major Battery Work": "major-battery-work",
+      "Battery Recycling & Refurbishment": "battery-recycling-refurbishment",
+      "Equipment We Use": "equipment-we-use"
+    };
+    return slugMap[serviceName] || "#";
+  };
 
   const styles = {
     container: {
@@ -198,10 +216,8 @@ export default function ServiceDetailSection({ service }) {
     },
     serviceText: {
       fontSize: isMobile ? '15px' : '16px',
-      flex: '1'
-    },
-    serviceTextActive: {
-      color: '#F06123'
+      flex: '1',
+      color: '#000000'
     },
     serviceTextInactive: {
       color: '#000000'
@@ -523,21 +539,26 @@ export default function ServiceDetailSection({ service }) {
           </div>
           <div style={styles.servicesList}>
             {services.map((service, index) => (
-              <motion.div
+              <Link
                 key={index}
-                style={service.active ? {...styles.serviceItem, ...styles.serviceItemActive} : styles.serviceItem}
-                whileHover={!service.active ? {
-                  backgroundColor: '#f9fafb',
-                  x: 5,
-                  transition: { duration: 0.2 }
-                } : { x: 5, transition: { duration: 0.2 } }}
+                to={`/service/${getServiceSlug(service.name)}`}
+                style={{ textDecoration: 'none' }}
               >
-                <div style={styles.serviceIcon}></div>
-                <span style={service.active ? {...styles.serviceText, ...styles.serviceTextActive} : {...styles.serviceText, ...styles.serviceTextInactive}}>
-                  {service.name}
-                </span>
-                <ChevronRight size={16} color={service.active ? '#F06123' : '#9ca3af'} />
-              </motion.div>
+                <motion.div
+                  style={service.active ? {...styles.serviceItem, ...styles.serviceItemActive} : styles.serviceItem}
+                  whileHover={!service.active ? {
+                    backgroundColor: '#f9fafb',
+                    x: 5,
+                    transition: { duration: 0.2 }
+                  } : { x: 5, transition: { duration: 0.2 } }}
+                >
+                  <div style={styles.serviceIcon}></div>
+                  <span style={service.active ? {...styles.serviceText, ...styles.serviceTextActive} : styles.serviceText}>
+                    {service.name}
+                  </span>
+                  <ChevronRight size={16} color={service.active ? '#F06123' : '#9ca3af'} />
+                </motion.div>
+              </Link>
             ))}
           </div>
         </motion.div>

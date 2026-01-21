@@ -3,8 +3,13 @@ import ElectricalConditioning from '../assets/Electrical Conditioning.png';
 import equpiment from '../assets/equpiment.png';
 import Maintenance from '../assets/Maintenance.png';
 import major from '../assets/major.png';
-
-
+import Nik from '../assets/Nik.webp';
+import UPS from '../assets/UPS.webp';
+import emr from '../assets/Emer.webp';
+import Onsite from '../assets/Onsite.webp';
+import prevent from '../assets/prevent.webp';
+import washing from '../assets/washing.webp'
+import rec from  '../assets/reconditiong.webp'
 
 
 
@@ -70,7 +75,7 @@ export const serviceDetailData = [
     emergencyDescription: "Our emergency response team is available 24/7 for critical Ni-Cd battery system issues.",
     certificationTitle: "IEEE Certified",
     certificationDescription: "All procedures comply with IEEE 1106, 1188, and 450 standards.",
-    imageUrl: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80"
+    imageUrl: Nik
   },
   {
     id: 2,
@@ -134,7 +139,7 @@ export const serviceDetailData = [
     emergencyDescription: "Contact us to design a customized preventive maintenance program for your facility.",
     certificationTitle: "NERC Compliant",
     certificationDescription: "All maintenance programs meet or exceed NERC reliability standards.",
-    imageUrl: "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=800&q=80"
+    imageUrl: prevent
   },
   {
     id: 3,
@@ -197,7 +202,7 @@ export const serviceDetailData = [
     emergencyDescription: "We provide rapid response for emergency battery removal and disposal situations.",
     certificationTitle: "EPA Certified",
     certificationDescription: "Fully certified under EPA hazardous waste regulations and protocols.",
-    imageUrl: "https://images.unsplash.com/photo-1593941707882-a5bac564cd31?w=800&q=80"
+    imageUrl: BatteryRecycle,
   },
   {
     id: 4,
@@ -260,7 +265,7 @@ export const serviceDetailData = [
     emergencyDescription: "Our rapid response team can restore your UPS battery bank within hours, not days.",
     certificationTitle: "Manufacturer Certified",
     certificationDescription: "Certified by major UPS manufacturers including APC, Eaton, and Liebert.",
-    imageUrl: "https://images.unsplash.com/photo-1581091226825-a6a7a7030fe1?w=800&q=80"
+    imageUrl: UPS
   },
   {
     id: 5,
@@ -324,7 +329,7 @@ export const serviceDetailData = [
     emergencyDescription: "Call our 24/7 emergency hotline for immediate assistance with critical power failures.",
     certificationTitle: "Rapid Response Certified",
     certificationDescription: "Certified emergency response team with OSHA and safety training.",
-    imageUrl: "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=800&q=80"
+    imageUrl: emr
   },
   {
     id: 6,
@@ -387,7 +392,7 @@ export const serviceDetailData = [
     emergencyDescription: "Contact us for a free reconditioning assessment to see if your batteries can be restored.",
     certificationTitle: "Reconditioning Certified",
     certificationDescription: "Certified reconditioning processes meeting industry best practices.",
-    imageUrl: "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=800&q=80"
+    imageUrl: rec
   },
   {
     id: 7,
@@ -450,7 +455,7 @@ export const serviceDetailData = [
     emergencyDescription: "Our mobile service teams can be at your facility within hours for emergency service.",
     certificationTitle: "Field Service Certified",
     certificationDescription: "All field technicians are OSHA certified and manufacturer trained.",
-    imageUrl: "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=800&q=80"
+    imageUrl: Onsite
   },
   {
     id: 8,
@@ -513,7 +518,7 @@ export const serviceDetailData = [
     emergencyDescription: "Contact us immediately for professional corrosion removal and battery cleaning services.",
     certificationTitle: "Safety Certified",
     certificationDescription: "All cleaning procedures meet OSHA and environmental safety standards.",
-    imageUrl: "https://images.unsplash.com/photo-1603796846097-bee99e4a601f?w=800&q=80"
+    imageUrl: washing
   },
   {
     id: 9,

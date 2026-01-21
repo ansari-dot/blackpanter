@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import emr from '../assets/Emer.webp';
+import Man from  '../assets/Man.webp';
+import UPS from '../assets/UPS.webp';
 export default function RecentProjects() {
   // Responsive state
   const [isMobile, setIsMobile] = React.useState(window.innerWidth <= 768);
@@ -16,19 +18,19 @@ export default function RecentProjects() {
 
   const projects = [
     {
-      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop",
+      image: UPS,
       title: "Critical UPS Replacement",
       description: "Zero-downtime battery bank upgrade.",
       gradient: "linear-gradient(to right, #F06123, #FF8803)"
     },
     {
-      image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop",
+      image: Man,
       title: "Manufacturing Plant Overhaul",
       description: "Complete battery system modernization.",
       gradient: "linear-gradient(to right, #FF8803, #F06123)"
     },
     {
-      image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&h=600&fit=crop",
+      image: emr,
       title: "Emergency Response Service",
       description: "24/7 critical power restoration.",
       gradient: "linear-gradient(to right, #F06123, #FF8803, #F06123)"

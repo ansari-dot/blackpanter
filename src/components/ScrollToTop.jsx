@@ -27,10 +27,10 @@ export const ScrollToTop = () => {
   const styles = {
     button: {
       position: 'fixed',
-      bottom: '30px',
-      right: '30px',
-      width: '50px',
-      height: '50px',
+      bottom: '24px',
+      right: '24px',
+      width: '56px',
+      height: '56px',
       backgroundColor: '#F06123',
       color: '#ffffff',
       border: 'none',
@@ -39,12 +39,12 @@ export const ScrollToTop = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      fontSize: '18px',
+      fontSize: '20px',
       boxShadow: '0 4px 12px rgba(240, 97, 35, 0.3)',
-      transition: 'all 0.3s ease',
+      transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
       opacity: isVisible ? 1 : 0,
       visibility: isVisible ? 'visible' : 'hidden',
-      transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+      transform: isVisible ? 'translateY(0) scale(1)' : 'translateY(20px) scale(0.8)',
       zIndex: '1000'
     },
     buttonHover: {

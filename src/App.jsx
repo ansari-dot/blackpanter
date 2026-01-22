@@ -6,6 +6,7 @@ import { Service } from "./pages/Service";
 import { ServiceDetail } from "./pages/ServiceDetail";
 import { ServiceDetailPage } from "./pages/ServiceDetailPage";
 import { Contact } from "./pages/Contact";
+import WhatsAppFloating from "./components/WhatsAppFloating";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Home />} />
       </Routes>
+      <WhatsAppFloating />
     </div>
   );
 }

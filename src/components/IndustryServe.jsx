@@ -1,4 +1,7 @@
 import React from 'react';
+import logo1 from '../assets/logo1.png';
+import logo2 from '../assets/logo2.png';
+
 
 export default function IndustriesWeServe() {
   // Responsive state
@@ -14,11 +17,10 @@ export default function IndustriesWeServe() {
   }, []);
 
   const logos = [
-    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/15a419d1-2be2-4333-8990-996a37095d41",
-    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/50482ea8-4300-4e7e-ab52-0e921a7cb314",
-    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/14182c43-5a06-40d5-9c75-9637e00a6ae2",
-    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a1404ec7-8574-439c-aa25-2ad784ee120f",
-    "https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3d311456-ac78-4ba5-8821-acddd1a4d26e"
+    logo1,
+    logo2,
+    logo1,
+    logo2,
   ];
 
   const styles = {

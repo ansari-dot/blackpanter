@@ -193,7 +193,7 @@ export default function WhoWeAreSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
         ></motion.div>
         <p style={styles.description}>
-          We are a full-service industrial battery maintenance facility serving businesses across the United States. With 20+ years of field and facility-level experience, we specialize in the inspection, testing, restoration, and optimization of high-reliability battery systems.
+          We are a full-service industrial battery maintenance facility serving businesses across Australia. With 20+ years of field and facility-level experience, we specialize in the inspection, testing, restoration, and optimization of high-reliability battery systems.
         </p>
 
         {/* Battery Type Cards */}

@@ -20,33 +20,33 @@ export default function WhyChooseUsSection() {
   const reasons = [
     {
       Icon: Shield,
-      title: "Licensed & Insured Plumbers",
-      description: "Fully certified professionals delivering safe, compliant, and reliable service."
+      title: "Licensed & Certified Battery Technicians",
+      description: "Fully certified professionals delivering safe, compliant, and reliable battery maintenance services."
     },
     {
       Icon: DollarSign,
       title: "Upfront, Honest Pricing",
-      description: "Clear estimates with no hidden fees or last-minute surprises."
+      description: "Clear estimates with no hidden fees or last-minute surprises for all battery services."
     },
     {
       Icon: Clock,
       title: "Fast Response Times",
-      description: "Quick scheduling and rapid on-site support when you need it most."
+      description: "Quick scheduling and rapid on-site support when your critical power systems need attention."
     },
     {
       Icon: Award,
       title: "Quality Work Guaranteed",
-      description: "High standards, durable solutions, and workmanship you can trust."
+      description: "High standards, durable solutions, and workmanship you can trust for your battery systems."
     },
     {
       Icon: Users,
-      title: "Experienced Technicians",
-      description: "Skilled professionals with hands-on expertise across residential..."
+      title: "Experienced Battery Technicians",
+      description: "Skilled professionals with hands-on expertise across industrial, commercial, and utility battery systems."
     },
     {
       Icon: Heart,
       title: "Customer-First Service",
-      description: "Clear communication, dependable support, and complete satisfaction from start to..."
+      description: "Clear communication, dependable support, and complete satisfaction from start to finish."
     }
   ];
 

@@ -506,7 +506,7 @@ export default (props) => {
 								}}
 								variants={fadeInUp}
 							>
-								{"We are a full-service industrial battery maintenance facility serving businesses across the United States. With 20+ years of field and facility-level experience, we specialize in the inspection, testing, restoration, and optimization of high-reliability battery systems."}
+								{"We are a full-service industrial battery maintenance facility serving businesses across Australia. With 20+ years of field and facility-level experience, we specialize in the inspection, testing, restoration, and optimization of high-reliability battery systems."}
 							</motion.span>
 							
 							{/* Professional Battery Type Cards */}
@@ -1276,7 +1276,7 @@ export default (props) => {
 								whileHover={{ scale: 1.05, y: -2 }}
 							>
 								<span className="text-[#383A3C] text-[15px] font-bold">
-									{"Call: (800) 555-0199"}
+									{"Call: +61 402 277 723"}
 								</span>
 							</motion.div>
 						</motion.div>

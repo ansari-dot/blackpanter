@@ -393,7 +393,7 @@ export default function CTASection() {
               transition: { duration: 0.3 }
             }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => alert('Call: (800) 555-0199')}
+            onClick={() => alert('Call: +61 402 277 723')}
           >
             <motion.svg 
               style={styles.phoneIcon} 
@@ -407,7 +407,7 @@ export default function CTASection() {
               style={{ transition: 'color 0.3s ease' }}
               whileHover={{ color: '#F06123' }}
             >
-              Call: (800) 555-0199
+              Call: +61 402 277 723
             </motion.span>
           </motion.button>
         </motion.div>

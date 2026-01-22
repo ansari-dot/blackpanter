@@ -94,19 +94,19 @@ const MeetOurExperts = () => {
     {
       id: 1,
       name: "Robert Chen",
-      title: "Co-Founder, Chief Architect",
+      title: "Co-Founder, Chief Battery Engineer",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
     },
     {
       id: 2,
       name: "Sarah Martinez",
-      title: "Co-Founder, Architect",
+      title: "Co-Founder, Battery Systems Specialist",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop"
     },
     {
       id: 3,
       name: "Michael Johnson",
-      title: "Architect",
+      title: "Senior Battery Technician",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
     }
   ];

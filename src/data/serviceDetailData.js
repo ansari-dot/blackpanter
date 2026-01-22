@@ -27,10 +27,10 @@ export const serviceDetailData = [
     criticalPowerDescription: "Nickel-Cadmium (Ni-Cd) and Block Nickel batteries are the backbone of industrial backup power, known for their durability in harsh environments. However, without proper maintenance, electrolyte levels can drift, carbonates can build up, and capacity can degrade silently.\n\nOur specialized maintenance program ensures your systems remain IEEE compliant and ready to perform when the grid fails. We service utility substations, railway signaling, and offshore platforms.",
     keyHighlights: [
       "Full ISO 17025 Lab Testing Capabilities",
-      "NERC PRC-005-6 Compliance Documentation",
+      "Australian Standards Compliance Documentation",
       "Nationwide 24/7 Field Support Response",
       "Ecologically Responsible Recycling Program",
-      "IEEE 1106 & 1188 Standard Compliance"
+      "IEEE 1106 & 1188 / AS 3820 Standard Compliance"
     ],
     services: [
       { name: "Ni-Cd & Block Nickel Maintenance", active: true },
@@ -73,8 +73,8 @@ export const serviceDetailData = [
     ],
     emergencyTitle: "Need Immediate Support?",
     emergencyDescription: "Our emergency response team is available 24/7 for critical Ni-Cd battery system issues.",
-    certificationTitle: "IEEE Certified",
-    certificationDescription: "All procedures comply with IEEE 1106, 1188, and 450 standards.",
+    certificationTitle: "IEEE & AS Certified",
+    certificationDescription: "All procedures comply with IEEE 1106, 1188, 450 and Australian AS 3820 standards.",
     imageUrl: Nik
   },
   {
@@ -137,8 +137,8 @@ export const serviceDetailData = [
     ],
     emergencyTitle: "Schedule Your Maintenance",
     emergencyDescription: "Contact us to design a customized preventive maintenance program for your facility.",
-    certificationTitle: "NERC Compliant",
-    certificationDescription: "All maintenance programs meet or exceed NERC reliability standards.",
+    certificationTitle: "Australian Standards Compliant",
+    certificationDescription: "All maintenance programs meet or exceed Australian reliability standards.",
     imageUrl: prevent
   },
   {
@@ -153,7 +153,7 @@ export const serviceDetailData = [
     criticalPowerTitle: "Environmental Stewardship",
     criticalPowerDescription: "Battery disposal is heavily regulated due to environmental concerns and hazardous materials. Improper disposal can lead to significant fines and environmental damage. Our recycling programs ensure 100% compliance with all local, state, and federal regulations.\n\nWe partner with certified recycling facilities to maximize material recovery while minimizing environmental impact. Our comprehensive documentation provides audit trails and certificates of recycling for your compliance records.",
     keyHighlights: [
-      "EPA Compliant Disposal Methods",
+      "Australian EPA Compliant Disposal Methods",
       "100% Material Recovery Programs",
       "Complete Documentation & Certificates",
       "Hazardous Materials Handling Certified",
@@ -174,7 +174,7 @@ export const serviceDetailData = [
       },
       {
         title: "Safe Removal",
-        description: "Professional de-installation following OSHA and environmental safety protocols.",
+        description: "Professional de-installation following Australian WHS and environmental safety protocols.",
         icon: "FaShieldAlt"
       },
       {
@@ -200,8 +200,8 @@ export const serviceDetailData = [
     ],
     emergencyTitle: "Emergency Disposal Needed?",
     emergencyDescription: "We provide rapid response for emergency battery removal and disposal situations.",
-    certificationTitle: "EPA Certified",
-    certificationDescription: "Fully certified under EPA hazardous waste regulations and protocols.",
+    certificationTitle: "Australian EPA Certified",
+    certificationDescription: "Fully certified under Australian EPA hazardous waste regulations and protocols.",
     imageUrl: BatteryRecycle,
   },
   {
@@ -328,7 +328,7 @@ export const serviceDetailData = [
     emergencyTitle: "Emergency Hotline Active",
     emergencyDescription: "Call our 24/7 emergency hotline for immediate assistance with critical power failures.",
     certificationTitle: "Rapid Response Certified",
-    certificationDescription: "Certified emergency response team with OSHA and safety training.",
+    certificationDescription: "Certified emergency response team with Australian WHS and safety training.",
     imageUrl: emr
   },
   {
@@ -454,7 +454,7 @@ export const serviceDetailData = [
     emergencyTitle: "Need On-Site Service?",
     emergencyDescription: "Our mobile service teams can be at your facility within hours for emergency service.",
     certificationTitle: "Field Service Certified",
-    certificationDescription: "All field technicians are OSHA certified and manufacturer trained.",
+    certificationDescription: "All field technicians are Australian WHS certified and manufacturer trained.",
     imageUrl: Onsite
   },
   {
@@ -517,7 +517,7 @@ export const serviceDetailData = [
     emergencyTitle: "Corrosion Issues Detected?",
     emergencyDescription: "Contact us immediately for professional corrosion removal and battery cleaning services.",
     certificationTitle: "Safety Certified",
-    certificationDescription: "All cleaning procedures meet OSHA and environmental safety standards.",
+    certificationDescription: "All cleaning procedures meet Australian WHS and environmental safety standards.",
     imageUrl: washing
   },
   {
@@ -599,7 +599,7 @@ export const serviceDetailData = [
       "Advanced Diagnostic Equipment",
       "Load Bank Testing",
       "Cell Balancing Services",
-      "IEEE Standards Compliance",
+      "IEEE & AS Standards Compliance",
       "Thermal Imaging Analysis",
       "Expert Electrical Engineering"
     ],
@@ -645,7 +645,7 @@ export const serviceDetailData = [
     emergencyTitle: "Electrical Emergency?",
     emergencyDescription: "24/7 emergency electrical services for critical battery system issues.",
     certificationTitle: "Certified Testing",
-    certificationDescription: "All testing procedures comply with IEEE 450, 1188, and 1106 standards.",
+    certificationDescription: "All testing procedures comply with IEEE 450, 1188, 1106 and Australian AS 3820 standards.",
     imageUrl: ElectricalConditioning
   },
   {
@@ -709,7 +709,7 @@ export const serviceDetailData = [
     emergencyTitle: "Installation Emergency?",
     emergencyDescription: "24/7 emergency installation and maintenance services for critical battery system failures.",
     certificationTitle: "Installation Certified",
-    certificationDescription: "All installation work meets NEC, IBC, and local electrical code requirements.",
+    certificationDescription: "All installation work meets Australian AS/NZS 3000 and local electrical code requirements.",
     imageUrl: major
   },
   {
@@ -724,7 +724,7 @@ export const serviceDetailData = [
     criticalPowerTitle: "Sustainable Battery Solutions",
     criticalPowerDescription: "Professional battery recycling and refurbishment services that protect the environment while maximizing value. Our processes ensure compliance with all environmental regulations.",
     keyHighlights: [
-      "EPA Compliant Recycling",
+      "Australian EPA Compliant Recycling",
       "Battery Refurbishment Programs",
       "Environmental Protection",
       "Resource Recovery",
@@ -773,7 +773,7 @@ export const serviceDetailData = [
     emergencyTitle: "Recycling Emergency?",
     emergencyDescription: "24/7 emergency recycling services for battery spills and environmental incidents.",
     certificationTitle: "Environmental Certified",
-    certificationDescription: "All recycling processes meet EPA and environmental regulatory standards.",
+    certificationDescription: "All recycling processes meet Australian EPA and environmental regulatory standards.",
     imageUrl: BatteryRecycle
   },
   {

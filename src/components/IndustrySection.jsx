@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import workerImg from "../assets/1.jpg";
+import workerImg from "../assets/w.webp";
 
 const IndustrySection = () => {
     // Animation variants
